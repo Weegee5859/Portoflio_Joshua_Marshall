@@ -1,0 +1,242 @@
+@import url(fontawesome-all.min.css);
+
+/*
+	Fractal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	color: white;
+	font: inherit;
+	vertical-align: baseline;}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;}
+
+body {
+	line-height: 1;
+}
+
+
+/* Header */
+
+#header {
+	background-image: "images/bg.jpg";
+	background-color: rgb(3, 0, 5);
+	background-size: cover;
+	background-position: center;
+	padding: 1em 1em 1em 1em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+}
+
+#header .content {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin-right: 3em;
+}
+
+#header .image {
+	display: flex;
+	justify-content: center;
+}
+
+#header img {
+	width: 13em;
+	height: 13em;
+	border-radius: 7px;
+}
+
+#header .content h1 {
+	font-size: 3.5em;
+	line-height: 1.25em;
+	margin: 0;
+}
+
+#header .content p {
+	font-size: 1.25em;
+	line-height: 1.25em;
+	margin: 0.75em 0 0 0;
+}
+
+#header #resume_button {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	background-color: transparent;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 2.5em;
+}
+
+#header #resume_button a {
+	padding: 0;
+	margin: 0;
+}
+
+#header .divider {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border-top: 2px solid rgba(255, 255, 255, 0.1);
+	padding: .5em;
+}
+
+#header .divider h2 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+#header .divider .icons a {
+	width: 2.5em;
+	padding: 1em;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	pointer-events: none;
+}
+
+/* title card */
+
+#title_card {
+	display: flex;
+	justify-content: center;
+	padding: 1em 1em 1em 1em;
+	background-color: rgb(18, 3, 31);
+}
+
+#title_card p {
+	font-size: 2em;
+}
+
+/* Main */
+
+#main {
+	background-color: black;
+}
+
+.spotlight {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 2rem;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 1.75rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	backdrop-filter: blur(12px);
+}
+
+.spotlight:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+
+.spotlight .image,
+.spotlight .content {
+	flex: 1 1 50%;
+	min-width: 0;
+}
+
+.spotlight .image img {
+	width: 70%;
+	height: auto;
+	border-radius: 1rem;
+	object-fit: cover;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.spotlight .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 1rem;
+}
+
+.spotlight .content h3 {
+	font-size: 1.75rem;
+	margin-bottom: 1rem;
+}
+
+.spotlight .content p {
+	line-height: 1.8;
+	color: #ddd;
+}
+
+@media screen and (max-width: 920px) {
+	.spotlight {
+		flex-direction: column;
+	}
+	.spotlight:nth-of-type(even) {
+		flex-direction: column;
+	}
+}
+
+/* Special sections */
+
+.special {
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 1.75rem;
+	border-radius: 1rem;
+	margin: 2rem 0;
+	text-align: center;
+}
+
+/* Footer */
+
+#footer {
+	background-color: rgb(18, 3, 31);
+	padding: 1em;
+	text-align: center;
+}
+
+/* Social Icons */
+
+.icons {
+	display: flex;
+	justify-content: center;
+	gap: 2em;
+	margin: 1em;
+}
+
+.icons a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0.5em;
+	text-decoration: none;
+	
+}
+
+.icons a i {
+	font-size: 2em;
+	text-decoration: none;
+}
+
+.icons a .label {
+	margin-top: 0.5em;
+	text-decoration: none;
+}
+
