@@ -1,16 +1,24 @@
 @import url(fontawesome-all.min.css);
 
-/*
-	Fractal by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+@font-face {
+	font-family: 'MyLocalFont';
+	src: url('assets/webfonts/fa-brands-400.ttf') format('truetype');
+}
+
+:root {
+  --secondary-color: rgb(185, 25, 206);
+}
+
+
+body {
+  font-family: 'Verdana';
+}
 
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
+code, del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
@@ -24,7 +32,9 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	color: white;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	font-family: 'MyLocalFont', 'Font Awesome 5 Brands', 'Verdana', sans-serif;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -33,7 +43,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-
 
 /* Header */
 
@@ -61,7 +70,7 @@ body {
 	justify-content: center;
 }
 
-#header img {
+#header .profile_picture {
 	width: 13em;
 	height: 13em;
 	border-radius: 7px;
@@ -77,23 +86,43 @@ body {
 	font-size: 1.25em;
 	line-height: 1.25em;
 	margin: 0.75em 0 0 0;
+	
+}
+
+#header .content .inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
+}
+
+#header .content h3 {
+	color: var(--secondary-color);
 }
 
 #header #resume_button {
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--secondary-color);
 	border-radius: 6px;
-	background-color: transparent;
-	color: white;
+	color: var(--secondary-color);
 	font-size: 1em;
 	cursor: pointer;
 	padding-left: 1em;
 	padding-right: 1em;
 	height: 2.5em;
+	background-color: transparent;
+}
+
+#header #resume_button:hover {
+	background-color: var(--secondary-color);
+	color: black;
 }
 
 #header #resume_button a {
 	padding: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 #header .divider {
@@ -107,11 +136,12 @@ body {
 #header .divider h2 {
 	font-size: 1.5em;
 	text-align: center;
+	color: var(--secondary-color);
 }
 
 #header .divider .icons a {
 	width: 2.5em;
-	padding: 1em;
+	padding: 1.25em;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 6px;
 	pointer-events: none;
@@ -138,50 +168,64 @@ body {
 
 .spotlight {
 	display: flex;
+	flex-direction: column;
 	align-items: stretch;
 	justify-content: space-between;
 	gap: 2rem;
 	background: rgba(255, 255, 255, 0.04);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	padding: 1.75rem;
-	border-radius: 1rem;
 	overflow: hidden;
 	backdrop-filter: blur(12px);
 }
 
-.spotlight:nth-of-type(even) {
+.spotlight:nth-of-type(even) .content{
 	flex-direction: row-reverse;
 }
 
-.spotlight .image,
-.spotlight .content {
-	flex: 1 1 50%;
-	min-width: 0;
-}
-
-.spotlight .image img {
-	width: 70%;
+.spotlight img {
+	width: 45%;
 	height: auto;
 	border-radius: 1rem;
 	object-fit: cover;
 	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+	margin-right: 2em;
+	margin-left: 2em;
 }
 
 .spotlight .content {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	padding: 0 1rem;
 }
 
-.spotlight .content h3 {
-	font-size: 1.75rem;
+.spotlight h1 {
+	font-size: 2.25rem;
 	margin-bottom: 1rem;
+	text-align: center;
 }
 
 .spotlight .content p {
+	font-size: 1.25em;
 	line-height: 1.8;
 	color: #ddd;
+}
+
+.spotlight .content button {
+	margin-top: 1.5rem;
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--secondary-color);
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.spotlight .content button a {
+
+	text-decoration: none;
 }
 
 @media screen and (max-width: 920px) {
@@ -207,7 +251,7 @@ body {
 /* Footer */
 
 #footer {
-	background-color: rgb(18, 3, 31);
+	background-color: rgb(11, 0, 20);
 	padding: 1em;
 	text-align: center;
 }
@@ -232,6 +276,12 @@ body {
 
 .icons a i {
 	font-size: 2em;
+	text-decoration: none;
+}
+
+.icons a img {
+	width: 2em;
+	height: 2em;
 	text-decoration: none;
 }
 
