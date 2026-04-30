@@ -68,6 +68,7 @@ body {
 #header .image {
 	display: flex;
 	justify-content: center;
+	margin-right: 2em;
 }
 
 #header .profile_picture {
@@ -294,6 +295,8 @@ body {
 
 @media only screen and (max-width: 767px) {
 	/* Styles for mobile phones */
+
+	/* Spotlights */
 	.spotlight {
 		flex-direction: column;
 		justify-content: center;
@@ -319,10 +322,11 @@ body {
 	}
 
 	.spotlight .content p {
-		font-size: 0.75em;
+		font-size: 1em;
 		text-align: left;
 	}
 
+	/* Header */
 	#header .content {
 		flex-direction: column;
 		align-items: center;
@@ -335,12 +339,26 @@ body {
 	}
 
 	#header .content p {
-		font-size: 0.75em;
+		font-size: 1em;
 	}
 
 	#header .image {
-		width: 0px;
-		height: 0px;
-		visibility: hidden;
+		width: 8em;
+
+		margin: 2em;
+		margin-top: 0.5em;	
+	}
+
+	#header .divider .icons a {
+		width: 1em;
+		padding: 0.75em;
+	}
+
+	#header .divider .icons i {
+		font-size: 1.5em;
+	}
+
+	#header .divider .icons a .label {
+		font-size: 0.5em;
 	}
 }
