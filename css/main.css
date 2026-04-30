@@ -184,7 +184,7 @@ body {
 }
 
 .spotlight img {
-	width: 45%;
+	width: 30em;
 	height: auto;
 	border-radius: 1rem;
 	object-fit: cover;
@@ -263,6 +263,7 @@ body {
 	justify-content: center;
 	gap: 2em;
 	margin: 1em;
+	flex-wrap: wrap;
 }
 
 .icons a {
@@ -290,3 +291,56 @@ body {
 	text-decoration: none;
 }
 
+
+@media only screen and (max-width: 767px) {
+	/* Styles for mobile phones */
+	.spotlight {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.spotlight h1 {
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	.spotlight .content {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.spotlight:nth-of-type(even) .content{
+		flex-direction: column;
+	}
+
+	.spotlight .content img {
+		width: 100%;
+		margin: 5px;
+	}
+
+	.spotlight .content p {
+		font-size: 0.75em;
+		text-align: left;
+	}
+
+	#header .content {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin: 0px;
+	}
+
+	#header .content h1 {
+		font-size: 2em;
+	}
+
+	#header .content p {
+		font-size: 0.75em;
+	}
+
+	#header .image {
+		width: 0px;
+		height: 0px;
+		visibility: hidden;
+	}
+}
